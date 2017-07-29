@@ -41,18 +41,42 @@
                                     <action selector="betterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Vy-Kf-usM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZz-nH-OKd">
+                                <rect key="frame" x="137.5" y="207" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ax4-D0-wOR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FaF-8N-eoL">
+                                <rect key="frame" x="137.5" y="260" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fgk-6I-zAH"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FaF-8N-eoL" firstAttribute="top" secondItem="kZz-nH-OKd" secondAttribute="bottom" constant="23" id="2rb-8W-aUR"/>
+                            <constraint firstItem="kZz-nH-OKd" firstAttribute="top" secondItem="u9e-gA-Hxe" secondAttribute="bottom" constant="26" id="Hrg-rm-QYd"/>
+                            <constraint firstItem="kZz-nH-OKd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JDj-pc-Zrx"/>
                             <constraint firstItem="u9e-gA-Hxe" firstAttribute="top" secondItem="I11-ak-oIj" secondAttribute="bottom" constant="20" id="OnS-Kw-Dzu"/>
                             <constraint firstItem="u9e-gA-Hxe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZDG-9k-y44"/>
                             <constraint firstItem="I11-ak-oIj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aZ9-XT-rIw"/>
                             <constraint firstItem="I11-ak-oIj" firstAttribute="top" secondItem="01X-lN-hoC" secondAttribute="bottom" constant="10" id="eMR-Gh-G49"/>
                             <constraint firstItem="01X-lN-hoC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eUg-rq-J6M"/>
                             <constraint firstItem="01X-lN-hoC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="gkh-Vt-EI1"/>
+                            <constraint firstItem="FaF-8N-eoL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hKs-Sn-elA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="kZz-nH-OKd" id="xtV-3w-O1J"/>
+                        <outlet property="text2" destination="FaF-8N-eoL" id="DTM-xN-pjb"/>
                         <outlet property="theLabel" destination="01X-lN-hoC" id="vKv-od-QsC"/>
                     </connections>
                 </viewController>

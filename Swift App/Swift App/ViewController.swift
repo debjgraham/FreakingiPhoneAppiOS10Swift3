@@ -12,17 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var text1: UITextField!
+    @IBOutlet weak var text2: UITextField!
+    
     
     @IBAction func buttonTapped(_ sender: Any) {
-        theLabel.text = "Hello there!"
-        tapCount += 1
-        
-        if tapCount >= 10 {
-            theLabel.text = "You tapped the button 10 times."
-            self.view.backgroundColor = UIColor.blue
-        }
-        print(tapCount)
+        theLabel.text = "answer: \(Double(text1.text!)! + Double(text2.text!)!)"
     }
     
     @IBAction func betterButtonTapped(_ sender: Any) {
