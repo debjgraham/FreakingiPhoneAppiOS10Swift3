@@ -9,15 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var theLabel: UILabel!
     
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var text2: UITextField!
     
+    var addition = true
     
     @IBAction func buttonTapped(_ sender: Any) {
-        theLabel.text = "answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+        addition = !addition
+        
+        if addition {
+            theLabel.text = "answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+        } else {
+            theLabel.text = "answer: \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
+        
+        
     }
     
     @IBAction func betterButtonTapped(_ sender: Any) {
@@ -31,12 +40,12 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.red
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
